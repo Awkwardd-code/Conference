@@ -1,15 +1,18 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #b91c1c;
+  --primary-foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +25,405 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+@keyframes commitment-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -0.75rem, 0) rotate(18deg);
+  }
+}
+
+.home-card-rail {
+  scrollbar-width: thin;
+  scrollbar-color: #d4af37 transparent;
+}
+
+.contact-field {
+  min-width: 0;
+  border: 1px solid #d6dfda;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  padding: 0.8rem 1rem;
+  font-size: 0.875rem;
+  color: #1a3a32;
+  outline: none;
+}
+
+.contact-label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: #1a3a32;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.sponsorship-label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: #1a3a32;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.sponsorship-field {
+  min-width: 0;
+  width: 100%;
+  border: 1px solid #cbd9d1;
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0.75rem 0.9rem;
+  color: #1a3a32;
+  outline: none;
+}
+
+.sponsorship-field:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgb(212 175 55 / 0.16);
+}
+
+.contact-field::placeholder {
+  color: #64746d;
+}
+
+.contact-field:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgb(212 175 55 / 0.16);
+}
+
+.home-card-rail::-webkit-scrollbar {
+  height: 0.35rem;
+}
+
+.home-card-rail::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.home-card-rail::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: #d4af37;
+}
+
+@media (max-width: 639px) {
+  .participant-marquee {
+    animation: none;
+  }
+}
+
+.home-action-button {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease,
+    color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.home-action-button:hover {
+  transform: translateY(-0.125rem);
+}
+
+.home-action-button:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+.home-action-button-primary {
+  background: #1a3a32;
+  color: #ffffff;
+  box-shadow: 0 0.5rem 1rem rgb(26 58 50 / 0.15);
+}
+
+.home-action-button-primary:hover {
+  background: #d4af37;
+  color: #1a3a32;
+  box-shadow: 0 0.75rem 1.5rem rgb(26 58 50 / 0.18);
+}
+
+.home-action-button-secondary {
+  border: 1px solid rgb(26 58 50 / 0.2);
+  background: #ffffff;
+  color: #1a3a32;
+}
+
+.home-action-button-secondary:hover {
+  border-color: #1a3a32;
+  background: #1a3a32;
+  color: #ffffff;
+  box-shadow: 0 0.5rem 1rem rgb(26 58 50 / 0.12);
+}
+
+.home-card-link {
+  display: inline-flex;
+  min-height: 2.25rem;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 9999px;
+  background: rgb(26 58 50 / 0.06);
+  padding: 0.5rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a3a32;
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease,
+    color 300ms ease;
+}
+
+.home-card-link:hover {
+  transform: translateY(-0.1rem);
+  background: #d4af37;
+  color: #1a3a32;
+}
+
+.home-staged-item {
+  display: none;
+}
+
+.home-staged-item:nth-child(-n + 2) {
+  display: flex;
+}
+
+.home-staged-grid.is-expanded .home-staged-item:nth-child(-n + 4) {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .home-staged-item:nth-child(-n + 3) {
+    display: flex;
+  }
+
+  .home-staged-grid.is-expanded .home-staged-item:nth-child(-n + 6) {
+    display: flex;
+  }
+}
+
+@keyframes research-logo-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.research-logo-marquee {
+  animation: research-logo-scroll 28s linear infinite;
+}
+
+@keyframes news-scroll-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes conference-card-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.conference-card-reveal {
+  animation: conference-card-reveal 950ms cubic-bezier(0.22, 1, 0.36, 1)
+    var(--conference-reveal-delay) both;
+  will-change: opacity, transform;
+}
+
+.news-ticker-track {
+  animation: news-scroll-up 18s linear infinite;
+}
+
+@keyframes speaker-card-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.speaker-card-reveal {
+  animation: speaker-card-reveal 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.group:hover .news-ticker-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .research-logo-marquee,
+  .participant-marquee {
+    transform: none;
+  }
+
+  .news-ticker-track {
+    animation-play-state: paused;
+  }
+
+  .conference-card-reveal {
+    animation: none;
+  }
+
+  .speaker-card-reveal {
+    animation: none;
+  }
+}
+
+.research-hero-swiper .swiper-pagination {
+  bottom: 2rem;
+}
+
+.research-hero-swiper .swiper-pagination-bullet {
+  width: 0.65rem;
+  height: 0.65rem;
+  background: #d4af37;
+  opacity: 0.55;
+}
+
+.research-hero-swiper .swiper-pagination-bullet-active {
+  width: 2rem;
+  border-radius: 9999px;
+  opacity: 1;
+}
+
+.research-flow-swiper {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+.research-flow-swiper .swiper-slide {
+  width: 100%;
+  transition: opacity 1400ms ease-in-out;
+}
+
+.research-flow-swiper .swiper-pagination {
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.participant-testimonials .swiper-pagination {
+  bottom: -0.15rem;
+}
+
+.participant-testimonials .swiper-pagination-bullet {
+  width: 0.45rem;
+  height: 0.45rem;
+  background: #1a3a32;
+  opacity: 0.25;
+  transition: all 300ms ease;
+}
+
+.participant-testimonials .swiper-pagination-bullet-active {
+  width: 1.5rem;
+  border-radius: 9999px;
+  background: #d4af37;
+  opacity: 1;
+}
+
+@keyframes participant-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.participant-marquee {
+  animation: participant-marquee-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.participant-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+}
+
+.research-flow-swiper .swiper-pagination-bullet {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin: 0 !important;
+  background: #f9f9f6;
+  opacity: 0.3;
+  transition: width 300ms ease, opacity 300ms ease;
+}
+
+.research-flow-swiper .swiper-pagination-bullet-active {
+  width: 2rem;
+  border-radius: 9999px;
+  background: #d4af37;
+  opacity: 1;
+}
+
+.research-hero-swiper .swiper-button-next,
+.research-hero-swiper .swiper-button-prev {
+  color: #d4af37;
+}
+
+.highlights-pagination .swiper-pagination-bullet {
+  width: 0.45rem;
+  height: 0.45rem;
+  margin: 0 !important;
+  border-radius: 9999px;
+  background: #1a3a32;
+  opacity: 0.25;
+  transition: width 300ms ease, opacity 300ms ease;
+}
+
+.highlights-pagination .swiper-pagination-bullet-active {
+  width: 1.25rem;
+  opacity: 1;
+  background: #d4af37;
+}
+
+@media (max-width: 640px) {
+  .research-hero-swiper .swiper-button-next,
+  .research-hero-swiper .swiper-button-prev {
+    display: none;
+  }
 }
