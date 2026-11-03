@@ -53,7 +53,7 @@ export default function Logo({ className = "", variant = "light" }: LogoProps) {
             isDark ? "text-white" : "text-[#1A3A32]"
           }`}
         >
-          GLOBAL SCHOLARLY
+          GLOBAL SCHOLARLY{" "}
         </span>
         <span className="mt-0.5 truncate font-sans text-[8px] font-semibold tracking-[0.25em] text-[#D4AF37] sm:text-[9px] sm:tracking-[0.3em]">
           NEXUS

@@ -9,29 +9,24 @@ import "swiper/css/pagination";
 
 const slides = [
   {
-    alt: "Researchers collaborating during an international conference",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=2200&q=90",
+    alt: "Rajshahi University Research Bootcamp banner",
+    image: "/sliders/Rajshahi University Research Bootcamp Banner.png",
   },
   {
-    alt: "Speaker presenting research to an engaged academic audience",
-    image:
-      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=2200&q=90",
+    alt: "Research Bootcamp registration banner",
+    image: "/sliders/Research Bootcamp Registration Banner.png",
   },
   {
-    alt: "Scholars exchanging ideas at a global research event",
-    image:
-      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=2200&q=90",
+    alt: "Research Bootcamp registration banner alternative",
+    image: "/sliders/Research Bootcamp Registration Banner (1).png",
   },
   {
-    alt: "Students and researchers working together in a modern library",
-    image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2200&q=90",
+    alt: "RURJ Club Research Bootcamp banner",
+    image: "/sliders/RURJ Club Research Bootcamp Banner.png",
   },
   {
-    alt: "Research team collaborating around a shared workspace",
-    image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=90",
+    alt: "RURJ Club Research Bootcamp banner alternative",
+    image: "/sliders/RURJ Club Research Bootcamp Banner (1).png",
   },
 ];
 

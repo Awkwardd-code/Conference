@@ -11,12 +11,21 @@ import {
 
 const conferences = [
   {
+    id: 11,
+    dates: "7th November, 2026",
+    location: "University of Rajshahi, Bangladesh",
+    title: "Research Boothcamp-1 on Artificial Intelligence and Cyber Law",
+    acronym: "(AI & CYBER LAW)",
+    organizer: "Rajshahi University Research & Journal Club, Department of Law",
+  },
+  {
     id: 1,
     dates: "9th - 10th February, 2027",
     location: "Malaga, Spain",
     title:
       "International Conference on Soil Fertility and Nutrient Cycling in Agroecosystems",
     acronym: "(ICSFNC)",
+    organizer: "Global Scholarly Nexus",
   },
   {
     id: 2,
@@ -25,6 +34,7 @@ const conferences = [
     title:
       "International Conference on Real Estate and Economic Development Linkages",
     acronym: "(ICREEDL)",
+    organizer: "Global Scholarly Nexus",
   },
   {
     id: 3,
@@ -32,6 +42,7 @@ const conferences = [
     location: "Crete, Greece",
     title: "International Conference on Advances in Clinical Medicine Research",
     acronym: "(ICACMR)",
+    organizer: "Global Scholarly Nexus",
   },
   {
     id: 4,
@@ -40,6 +51,7 @@ const conferences = [
     title:
       "International Conference on Pediatric Cardiology and Heart Transplantation",
     acronym: "(ICPCHT)",
+    organizer: "Global Scholarly Nexus",
   },
   {
     id: 5,
@@ -47,6 +59,7 @@ const conferences = [
     location: "Kumasi, Ghana",
     title: "International Conference on Political Movements and Social Change",
     acronym: "(ICPMSC)",
+    organizer: "Global Scholarly Nexus",
   },
   {
     id: 6,
@@ -55,6 +68,7 @@ const conferences = [
     title:
       "International Conference on Aerospace, Mechanical, Automotive and Materials Engineering",
     acronym: "(ICAMAME)",
+    organizer: "Global Scholarly Nexus",
   },
   {
     id: 7,
@@ -63,6 +77,7 @@ const conferences = [
     title:
       "International Conference on Globalization, Poverty, and Urban Human Security",
     acronym: "(ICGPUHS)",
+    organizer: "Global Scholarly Nexus",
   },
   {
     id: 8,
@@ -71,6 +86,7 @@ const conferences = [
     title:
       "International Conference on Property Dispute Resolution and Real Estate Litigation",
     acronym: "(ICPDRREL)",
+    organizer: "Global Scholarly Nexus",
   },
   {
     id: 9,
@@ -78,6 +94,7 @@ const conferences = [
     location: "Lisbon, Portugal",
     title: "International Conference on Digital Education and Lifelong Learning",
     acronym: "(ICDELL)",
+    organizer: "Global Scholarly Nexus",
   },
   {
     id: 10,
@@ -85,6 +102,7 @@ const conferences = [
     location: "Cape Town, South Africa",
     title: "International Conference on Climate Finance and Sustainable Policy",
     acronym: "(ICCFSP)",
+    organizer: "Global Scholarly Nexus",
   },
 ];
 
@@ -162,6 +180,11 @@ export default function UpcomingConferenceGrid() {
                 <p className="mt-3 text-xs font-medium uppercase tracking-wider text-gray-500">
                   {conference.acronym}
                 </p>
+                {"organizer" in conference ? (
+                  <p className="mt-3 text-xs leading-relaxed text-gray-500">
+                    Organized by {conference.organizer}
+                  </p>
+                ) : null}
               </CardContent>
 
               <CardFooter className="mt-auto flex items-center justify-between border-t border-gray-50/50 p-5 pt-4">

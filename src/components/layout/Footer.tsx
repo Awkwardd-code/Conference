@@ -32,7 +32,10 @@ export default function Footer() {
       <div className="pointer-events-none absolute inset-0 opacity-30 [background:radial-gradient(circle_at_80%_0%,#1A3A32_0%,transparent_38%),linear-gradient(120deg,transparent_0%,rgba(212,175,55,0.04)_50%,transparent_100%)]" />
       <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 overflow-hidden px-6 py-12 md:grid-cols-2 md:px-12 lg:grid-cols-4">
         <div className="min-w-0">
-          <Logo variant="dark" className="origin-left scale-90" />
+          <Logo
+            variant="dark"
+            className="origin-left scale-90 max-w-none overflow-visible"
+          />
           <p className="mb-6 mt-4 max-w-sm text-sm leading-relaxed text-gray-300">
             GSN is a global platform dedicated to fostering academic excellence,
             meaningful collaboration, and knowledge exchange across disciplines.

@@ -17,7 +17,7 @@ export default function VideoBanner() {
 
         <div className="group relative overflow-hidden rounded-2xl border-2 border-white bg-black shadow-[0_24px_60px_-16px_rgba(26,58,50,0.35)] ring-1 ring-[#1A3A32]/10 sm:rounded-3xl sm:border-4">
           <video
-            src="/15162-262146025_medium.mp4"
+            src="/promotion.mp4"
             autoPlay
             muted
             loop

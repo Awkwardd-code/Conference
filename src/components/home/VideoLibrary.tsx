@@ -12,43 +12,43 @@ import { useState } from "react";
 const videos = [
   {
     title: "How great leaders inspire action",
-    date: "TED Talks",
+    date: "TED Conference",
     videoId: "qp0HIF3SfI4",
   },
   {
     title: "The power of vulnerability",
-    date: "TED Talks",
+    date: "TED Conference",
     videoId: "iCvmsMzlF7o",
   },
   {
     title: "Do schools kill creativity?",
-    date: "TED Talks",
+    date: "TED Conference",
     videoId: "iG9CE55wbtY",
   },
   {
-    title: "The happy secret to better work",
-    date: "TED Talks",
-    videoId: "fLJsdqxnZb0",
+    title: "The puzzle of motivation",
+    date: "TED Conference",
+    videoId: "rrkrQbYJ7pA",
   },
   {
-    title: "What makes a good life?",
-    date: "TED Talks",
-    videoId: "8KkKuTCFvzI",
+    title: "How to speak so that people want to listen",
+    date: "TED Conference",
+    videoId: "Lp7E973zozc",
   },
   {
     title: "The danger of a single story",
-    date: "TED Talks",
+    date: "TED Conference",
     videoId: "D9Ihs241zeg",
   },
   {
-    title: "The future of medicine is in your hands",
-    date: "TED Talks",
-    videoId: "j0w8JX9a7Eo",
+    title: "What makes a good life?",
+    date: "TED Conference",
+    videoId: "8KkKuTCFvzI",
   },
   {
-    title: "What does it mean to be a citizen of the world?",
-    date: "TED Talks",
-    videoId: "5LiuU8Y7H8s",
+    title: "The future of medicine is in your hands",
+    date: "TED Conference",
+    videoId: "j0w8JX9a7Eo",
   },
 ];
 
@@ -89,8 +89,9 @@ export default function VideoLibrary() {
             </h2>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-gray-600 md:pb-1">
-            Revisit memorable sessions and discover perspectives from leading
-            thinkers. Play every talk here or continue watching on YouTube.
+            Revisit memorable conference sessions and discover perspectives
+            from leading thinkers. Play every talk here or continue watching on
+            YouTube.
           </p>
         </div>
         <div className={`home-staged-grid relative grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 md:gap-6 ${hasLoadedMore ? "is-expanded" : ""}`}>

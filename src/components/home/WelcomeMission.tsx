@@ -12,6 +12,7 @@ const missionPoints = [
 ];
 
 const announcements = [
+  "Research Bootcamp 1 — 7 November 2026: Registration details will be announced soon.",
   "Applications are open for our upcoming speaker opportunities.",
   "Join the next Global Scholarly Nexus international conference.",
   "Submit your latest paper for peer review and publication.",
