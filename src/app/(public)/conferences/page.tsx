@@ -1,5 +1,5 @@
-import UnderConstruction from "@/components/shared/UnderConstruction";
+import ConferenceDirectory from "@/components/conferences/ConferenceDirectory";
 
 export default function PublicConferencesPage() {
-  return <UnderConstruction />;
+  return <ConferenceDirectory />;
 }
